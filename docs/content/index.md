@@ -5,6 +5,7 @@
 Used to initialialize a prototypical .NET/mono solution including file system layout and tooling.
 
 This includes [Paket](paket-package-management.html) dependency management and a [FAKE](fake-build.html) build process that: 
+This includes [Paket](paket-package-management.html) dependency management and a [FAKE](fake-build.html) build process which:
 
 * allows a simple [one step release process](release-process.html). 
 * works with most [build servers](build-servers.html) 
@@ -14,6 +15,12 @@ This includes [Paket](paket-package-management.html) dependency management and a
 * generates [API docs based on XML documentation tags](writing-docs.html#API-docs)
 * generates [documentation based on Markdown files](writing-docs.html#Markdown-files)
 * generates and/or pushes [NuGet](http://www.nuget.org) packages
+* generates [NuGet](http://www.nuget.org) packages
+* and allows a simple [one step release process](release-process.html).
+
+## Getting started
+
+This scaffolding process can be used to generate the suggested structure of a typical .NET library.
 
 ### Cloning the project
 
@@ -22,11 +29,19 @@ This first thing to do is to clone or copy the ProjectScaffold repository to you
 ### Initializing
 
 In order to start the scaffolding process run:
+In order to start the scaffolding process run
 
     $ build.cmd // on windows
     $ build.sh  // on mono
 
-During the init process you will be prompted for the name of your project and some other details: 
+During the init process you will be prompted for the name of your project and some other details including the following:
+
+* Project summary
+* Project description
+* Author's name for NuGet package
+* Tags for NuGet package (separated by spaces)
+* GitHub username
+* GitHub project name (if different than project name from above)
 
 ![alt text](img/init-script.png "Init script asking for project details")
 
@@ -34,6 +49,8 @@ The project structure will then be generated from templates.
 
 After the initialization you can open, edit, build and test using ``ProjectName.sln``.
  
+After the initialisation you can open, edit, build and test using ``ProjectName.sln``.
+
 ### Further topics
 
 * [Running builds](fake-build.html)
@@ -52,6 +69,9 @@ If you want to contribute to the documentation, please do so by doing a ``checko
 The library is released under a Public Domain license, which allows modification and 
 redistribution for both commercial and non-commercial purposes. For more information see the 
 [License file][license] in the GitHub repository. 
+The library is available under Public Domain license, which allows modification and
+redistribution for both commercial and non-commercial purposes. For more information see the
+[License file][license] in the GitHub repository.
 
   [content]: https://github.com/fsprojects/FSharp.ProjectScaffold/tree/master/docs/content
   [gh]: https://github.com/fsprojects/FSharp.ProjectScaffold

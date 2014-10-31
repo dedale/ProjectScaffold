@@ -21,14 +21,16 @@ You can include *Markdown* and **actual executable F# code** in the files.
 The process for editing documentation is to start a continuous documentation generation loop:
 
     $ build KeepRunning
-    
-This starts the [FSharp.Formatting](https://github.com/tpetricek/FSharp.Formatting) process. 
- 
+
+This starts the [FSharp.Formatting](https://github.com/tpetricek/FSharp.Formatting) process.
+
 ![alt text](img/keep-running.png "Keep running in order to edit docs")
 
 Now open `docs/output/index.html` and start to edit the files in `docs/content`. The build script will continuously sync the output automatically; you just have to refresh the browser.
 
 Press any key in command line window to end the loop.
+Now open `docs/output/index.html` and start editing the files in `docs/content`. The build script will update the output automatically.
+You just have to refresh the browser. Press any key in command line window when you are ready to finish updating the docs.
 
 ## API docs
 
@@ -39,6 +41,8 @@ To configure this process look into `docs/tools/generate.fsx` and look for:
     let referenceBinaries = [ "##ProjectName##.dll" ]
     
 This will be configured automatically during the init process, but you can add more libraries if you want. In order to trigger the generation process run:
+
+This will be configured automatically during the init process, but you can add more libraries if you want. In order to start the process run:
 
     $ build GenerateReferenceDocs
 
@@ -65,4 +69,5 @@ In order to release the docs run:
 This will start the build process and [FSharp.Formatting](https://github.com/tpetricek/FSharp.Formatting) again. 
 The output will then be pushed to your `gh-pages` branch where [GitHub](http://www.github.com) will pick it up and complete the release process.
 
+The release of the documentation is also done during the [Release process](release-process.html).
 The release of the documentation is also done during the [Release process](release-process.html).

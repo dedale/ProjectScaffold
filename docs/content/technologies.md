@@ -8,6 +8,8 @@
 | Build Automation          | [FAKE](http://fsharp.github.io/FAKE/)     |
 | Unit Testing              | [NUnit](http://www.nunit.org/)            |
 | Package Formats           | NuGet packages                            |
+| Unit Testing              | [NUnit](http://www.nunit.org/)     |
+| Package Formats           | Nuget packages                            |
 | Dependency Manager        | [Paket](http://fsprojects.github.io/Paket/) |
 | Documentation Authoring   | Markdown, HTML and F# Literate Scripts    |
 | Source Code Linking       | [SourceLinks](https://github.com/ctaggart/SourceLink) |
